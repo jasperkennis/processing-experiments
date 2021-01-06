@@ -1,14 +1,16 @@
+Car myCar1;
+Car myCar2;
+
 void setup() {
-  size(480, 120);
+  myCar1 = new Car(color(255,0,0),0,100,2);
+  myCar2 = new Car(color(0,0,255),0,10,1);
 }
 
 void draw() {
-  background(100, 100, 100, 100);
+  background(255);
 
-  if (mousePressed) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  ellipse(mouseX, mouseY, 80, 80);
+  myCar1.drive();
+  myCar1.display();
+  myCar2.drive();
+  myCar2.display();
 }
