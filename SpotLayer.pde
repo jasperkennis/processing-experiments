@@ -15,6 +15,7 @@ class SpotLayer {
 	}
 
 	void moveAndDisplay() {
+		noStroke();
 		for (int i = 0; i < spots.length; i++) {
 			spots[i].move();
 			spots[i].display();

@@ -12,17 +12,15 @@ class Car {
 		xspeed = tempXspeed;
 	}
 
-	void display() {
-		// stroke(0);
-		fill(c);
-		rectMode(CENTER);
-		rect(xpos,ypos,20,10);
-	}
-
-	void drive() {
+	void driveAndDisplay() {
 		xpos = xpos + xspeed;
 		if (xpos > width) {
 			xpos = 0;
 		}
+
+		// stroke(0);
+		fill(c);
+		rectMode(CENTER);
+		rect(xpos,ypos,20,10);
 	}
 }
