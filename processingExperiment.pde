@@ -2,25 +2,12 @@ void setup() {
 }
 
 void draw() {
-  int x0 = 50;
-  int x1 = 61;
-  int x2 = 83;
-  int x3 = 69;
-  int x4 = 71;
-  int x5 = 50;
-  int x6 = 29;
-  int x7 = 31;
-  int x8 = 17;
-  int x9 = 39;
+  int[] x = {
+    50, 61, 83, 69, 71, 50, 29, 31, 17, 39
+  };
   fill(0);
-  rect(0, 0, x0, 8);
-  rect(0, 10, x1, 8);
-  rect(0, 20, x2, 8);
-  rect(0, 30, x3, 8);
-  rect(0, 40, x4, 8);
-  rect(0, 50, x5, 8);
-  rect(0, 60, x6, 8);
-  rect(0, 70, x7, 8);
-  rect(0, 80, x8, 8);
-  rect(0, 90, x9, 8);
+  // Read one array element each time through the for loop
+  for (int i = 0; i < x.length; i++) {
+    rect(0, i*10, x[i], 8);
+  }
 }
