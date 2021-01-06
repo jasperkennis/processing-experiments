@@ -13,7 +13,7 @@ class Car {
 	}
 
 	void display() {
-		stroke(0);
+		// stroke(0);
 		fill(c);
 		rectMode(CENTER);
 		rect(xpos,ypos,20,10);
