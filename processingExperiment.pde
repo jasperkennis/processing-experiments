@@ -1,7 +1,20 @@
 Car myCar1;
 Car myCar2;
 float[] sineWave;
-Spot[] spots; // Declare array
+Spot[] spots;
+int[][] x = {
+	{50, 0} ,
+	{61, 204} ,
+	{83, 51} ,
+	{69,102} ,
+	{71, 0} ,
+	{50,153} ,
+	{29, 0} ,
+	{31,51} ,
+	{17,102} ,
+	{39,204}
+};
+
 
 void setup() {
 	size(700, 100);
@@ -40,17 +53,13 @@ void draw() {
 		spots[i].display(); // Display each object
 	}
 
-	int[] x = {
-		50, 61, 83, 69, 71, 50, 29, 31, 17, 39
-	};
-	fill(0);
-	// Read one array element each time through the for loop
-	for (int i = 0; i < x.length; i++) {
-		rect(0, i * 10, x[i], 8);
-	}
-
 	myCar1.drive();
 	myCar1.display();
 	myCar2.drive();
 	myCar2.display();
+
+	for (int i = 0; i < x.length; i++) {
+		fill(x[i][1]);
+		rect(0, i * 10, x[i][0], 8);
+	}
 }
